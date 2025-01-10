@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregnancy Tracker</title>
+    <style>
+        body {
+background-image:url('pic2.jpg');
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            justify-content: center;
+align-items: center;
+margin: 0;
+height: 100vh;
+        }
+.name-header{
+    position:fixed;
+    top:0px;
+
+    height:100px;
+    width:100%;
+    z-index:10;
+    background-color:#0a2d42;
+}
+.navbar a{
+margin-right:10px;
+}
+.name-logo{
+    
+    height: 50px;
+
+    text-align: left;
+    margin: 10px;
+    float: left;
+    
+}
+.ll{
+    height: 80px;
+    width: 80px;
+}
+.navi{
+    margin: 40px;
+     float: right;
+    text-align: center;
+    font-family: "helvetica neue";
+    font-weight: bold;
+    font-color: white;
+    
+height: 100%;
+
+}
+.name-text{
+    margin: 38px;
+    font-size: 34px;
+    text-align: left;
+    font-family: "helvetica neue";
+    font-weight: bold;
+    color: white;
+}
+
+        #result {
+            margin-top: 100px;
+        }
+.photo-container {
+ display: flex;
+justify-content: space-between;
+align-items: center;
+margin: 9px;
+}
+.photo {
+width: 20%;
+height: auto;
+margin-right: 10px;
+border: 5px solid #000;
+}
+
+.content-container {
+text-align: center;
+}
+
+.content-box {
+width: 500px;
+padding: 20px;
+border: 1px solid #000;
+margin: 20px;
+display: inline-block;
+}
+
+.button-container {
+ display: flex;
+gap: 10px;
+justify-content: center;
+}
+
+
+ .date
+ {
+    min-width: 250px;
+  height: 15px;
+  border-radius: 15px;
+  border: none;
+  padding: 10px;
+  font-size: 1.2rem;
+ }
+
+
+.button {
+ padding: 10px;
+background-color: #4CAF50;
+color: white;
+border: 1 px solid black;
+border-radius: 5px;
+cursor: pointer;
+}
+#error{
+	color:red;
+}
+.butt{
+    color: white;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+ padding: 10px;
+background-color:#c14e2d;
+color: white;
+border: 1 px solid black;
+border-radius: 5px;
+cursor: pointer;
+
+}
+
+    </style>
+</head>
+<body>
+<header class="name-header">   <nav class="navi" >
+                  <div class="navbar">
+                  <a href="newin.html" style="color: white;">Login</a>
+                  <a href="trii.html" style="color: white;">Trimester</a>
+                  <a href="gunjan.html" style="color: white;">Bag</a>
+                  <a href="cur.html" style="color: white;">Tracker</a>
+                  <a href="aboutus.html" style="color: white;">About Us</a>
+                
+</div>
+                </nav>
+
+                      <div class="name-logo">
+        <img src="logo.jpg" class="ll">
+      </div>
+        <div class ="name-text">Mom&me
+          </div>
+</header>
+<br><br><br><br><br>
+<div class="content-container">
+<div class="content-box">
+    <h1><u>PREGNANCY TRACKER</u></h1>
+
+    <label for="conceptionDate"><i><b>PLEASE ENTER THE LAST PERIOD DATE:</b></i></label>
+    <input type="date" id="conceptionDate"><br><br>
+    <button onclick="calculatePregnancy()" class="butt"><b>Please calculate</b></button>
+    <div id="result"></div>
+    <div id="error"></div>
+</div>
+    <script>
+        function calculatePregnancy() {
+            const conceptionDateInput = document.getElementById('conceptionDate').value;
+            const today = new Date();
+		const conceptionDate=new Date(conceptionDateInput);
+		if(conceptionDate > today){
+			document.getElementById('error').innerText="Error:Date cannot be in future";
+			  document.getElementById('result').innerText="";
+			return;
+		}
+
+
+            
+            const weeksPregnant = Math.floor((today - conceptionDate) / (7 * 24 * 60 * 60 * 1000));
+            const deliveryDate = new Date(conceptionDate);
+            deliveryDate.setDate(deliveryDate.getDate() + (40 * 7)); // Assuming a 40-week pregnancy
+           let trimester;
+             if(weeksPregnant >=1 && weeksPregnant<=13)
+             {
+                trimester="first";
+             }
+             else if(weeksPregnant >=13 && weeksPregnant<=28)
+             {
+                trimester="second";
+             }
+             else
+             {
+                trimester="third";
+             }
+
+
+            const resultText = `<b>Current Week of Pregnancy: ${weeksPregnant} weeks</b><br><b>Estimated Delivery Date: ${deliveryDate.toDateString()}</b><br><b>You are Currently in your ${trimester} trimester of Your Pregnancy stage.</b>`;
+;
+
+            document.getElementById('result').innerHTML = resultText;
+              document.getElementById('error').innerText ="";
+
+    }
+function goToPage(page) {
+    window.location.href=page; 
+
+
+
+
+
+      }
+    </script>
+
+<div class="photo-container">
+<img src="photo.jpg" alt="photo" class="photo">
+<img src="photo2.jpg" alt="photo" class="photo">
+<img src="photo3.jpg" alt="photo" class="photo">
+<img src="photo1.jpg" alt="photo" class="photo">
+</div>
+<div class="button-container">
+<button onclick="goToPage('ppp.html')" class="button">Previous Page</button> 
+
+<button onclick="goToPage('trii.html')" class="button">Next Page</button>  
+ 
+
+
+
+
+
+</body>
+</html>

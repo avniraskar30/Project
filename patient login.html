@@ -1,0 +1,201 @@
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <style>
+    	:root {
+  --color-grey: #f6c3c4;
+  --color-pink: rgb(72, 32, 23);
+  --color-blue: rgb(99, 201, 243);
+  --color-green: rgb(138, 103, 65);
+}
+body {
+background-image:url('31.jpg');
+  background-color: var(--color-grey);
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+}
+.form-section {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  border-radius: 15px;
+
+}
+.toRight {
+  animation: slideRight 0.5s ease-in-out forwards;
+}
+.toLeft {
+  animation: slideLeft 0.5s ease-in-out forwards;
+  height: 100%;
+}
+
+.login-form {
+  width: 400px;
+  height: 100%;
+}
+.signup-form {
+  width: 400px;
+  height: 500px;
+}
+.switch {
+  color: white;
+  padding: 20px;
+  position: absolute;
+  height: 100%;
+  width: 45%;
+  background: var(--color-pink);
+}
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: fill;
+}
+.btn-switch {
+  background: var(--color-pink);
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+.btn-switch:hover {
+  background: var(--color-blue);
+}
+.green {
+  background: var(--color-green);
+}
+form input {
+    width: 90%;
+    padding: 10px;
+    margin:10px 0px;
+    border-radius: 20px;
+}
+form {
+margin: 20px;
+}
+/*
+.form input {
+  min-width: 250px;
+  height: 15px;
+  border-radius: 15px;
+  border: none;
+  padding: 10px;
+  font-size: 1.2rem;
+}*/
+.register-link {
+  margin-inline: 5px;
+  color: rgb(215, 8, 8);
+  text-decoration: underline;
+  cursor: pointer;
+}
+@keyframes slideRight {
+  0% {
+    transform: translateX(0);
+    background: var(--color-pink);
+  }
+  100% {
+    transform: translateX(400px);
+
+    background: var(--color-green);
+  }
+}
+@keyframes slideLeft {
+  0% {
+    transform: translateX(400px);
+    background: var(--color-green);
+  }
+  100% {
+    transform: translateX(0px);
+    background: var(--color-pink);
+  }
+}
+    </style>
+    
+  </head>
+  <body>
+    <div class="form-section">
+      <div class="switch" id="switch">
+        <div class="row">
+          <img class="logo" src="logo.jpg" alt="logo logo" />
+          <h1>MoM&Me</h1>
+        </div>
+        <h3>Have A Nice Day!!</h3>
+        <p>
+           Motherhood is an indescribable journey filled with unconditional love, sleepless nights, and countless precious moments. It's about nurturing, guiding, and watching your child grow into their own unique individual. It's a beautiful mix of joy, challenges, and endless learning. It's a role that brings immense fulfillment and a love like no other. 💕👩<200d>👧<200d>>👦
+        </p>
+      </div>
+      <div class="login-form center">
+        <h1>Sign Up</h1>
+        <form action="signup.php" method="post">
+          <center><label for="">First Name:</label></center>
+        <input class="form-input" type="text"  name="Fist_name" required>
+
+        <center><label for="">Mobile no:</label></center>
+        <input class="form-input" type="number" name="Mobile_no" required>
+                <center><label for="">Email:</label></center>
+                <input class="form-input" type="text" name="Email" required>
+        <center>Marital status:
+         <select id="Marital-status" name="Marital-status" required>
+
+         <option value="Married">Married</option>
+         <option value="Unmarried">Unmarried</option></center>
+         </select><br>
+
+                <label for="">Address :</label>
+        <input class="form-input" type="text" name="Address" required>
+
+        <label for="">Password:</label>
+        <input class="form-input" type="password" name="Password" required>
+        <!--<label for="">Password repeat:</label>
+	<input class="form-input" type="password" name="Passwordrepeat" required>-->
+
+        <button class="btn-switch green" >Sign Up</button>
+</form>
+        <p>
+          Already have an account?<span class="register-link" id="login">Login</span>
+              </p>
+      </div>
+      <div class="signup-form center">
+        <h1>Login For Patient</h1>
+        <form action="login.php" method="post">
+        <center><label for="">Username:</label>
+        <input class="form-input" id="Username" name="Username" type="text" required>
+        <label for="">Password:</label>
+        <input class="form-input" id="Password" name="Password" type="password" required>
+       <button class="btn-switch">Login</button></center>
+        </form>
+        <p>
+          Don't have account yet?<span class="register-link" id="signup">Register</span>
+        </p>
+      </div>
+    </div>
+    <script src="SCR.js"></script>
+  </body>
+</html>
+

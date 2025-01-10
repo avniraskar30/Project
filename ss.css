@@ -1,0 +1,121 @@
+body{
+	margin:0px;
+}
+.backim{
+	
+    margin: 100px;
+ 
+height: 10%;
+width: 500px;
+background-color: #a0a0a0;
+}
+
+.patient{
+	float: right;
+ height: 100px;
+ width: 100px;
+ margin: 160px;
+ align-items: center;
+ display: block;
+
+ 
+
+}
+.PATIENT{
+    margin: 120px;
+	height: 100px;
+	width: 100px;
+}
+.ADMIN{
+	margin: 120px;
+	height: 100px;
+	width: 100px;
+}
+.admin{
+	float: right;
+	height: 100px;
+	width: 100px;
+	margin: 160px;
+	align-items: center;
+	
+	
+}
+.name-header{
+	position:fixed;
+	top:0px;
+
+	height:100px;
+	width:100%;
+	z-index:10;
+	background-color:#80ece2;
+}
+.name-logo{
+	
+	height: 50px;
+
+	text-align: left;
+	margin: 10px;
+	float: left;
+	
+}
+.name-text{
+	margin: 38px;
+	font-size: 34px;
+	text-align: left;
+	font-family: "helvetica neue";
+	font-weight: bold;
+	color: white;
+}
+
+ .navi{
+ 	margin: 40px;
+     float: right;
+ 	text-align: center;
+ 	font-family: "helvetica neue";
+ 	font-weight: bold;
+ 	font-color: white;
+
+height: 100%;
+
+
+
+ }
+ 
+ 
+ 
+ 
+
+.ll{
+	height: 80px;
+	width: 80px;
+}
+.space{
+	top:10%;
+}
+.button1{
+		
+         display: block;
+         line-height: 1.9em;
+         margin-top: 0.2em;
+         top:30%;
+         
+		 margin: 100px;
+		padding-inline: 20px;
+		background-color: #0a2d42;
+		font-family: "helvetica neue";
+		color: white;
+
+	}
+		 .button2{
+		 	line-height: 1.9em;
+         margin-top: 0.2em;
+		 	padding-inline: 20px;
+		background-color: #0a2d42;
+		font-family: "helvetica neue";
+		color: white;
+		 	display: block;
+		    margin: 150px;
+		    
+		
+			}
+

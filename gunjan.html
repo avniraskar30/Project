@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Existing styles... */
+
+        .item-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 4px;
+            margin-bottom: 8px;
+        }
+
+        .item-container span {
+            flex-grow: 1;
+            margin-right: 10px;
+        }
+
+        .delete-btn {
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 8px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+        }
+        /* Existing styles... */
+         body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+          
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image:url('bag.jpg');
+        }
+
+        .container {
+           /* background-color: rgba(255, 255, 255, 0.9);*/
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+.name-header{
+    position:fixed;
+    top:0px;
+
+    height:100px;
+    width:100%;
+    z-index:10;
+    background-color:#0a2d42;
+}
+.navbar a{
+margin-right:10px;
+}
+.name-logo{
+    
+    height: 50px;
+
+    text-align: left;
+    margin: 10px;
+    float: left;
+    
+}
+.ll{
+    height: 80px;
+    width: 80px;
+}
+.navi{
+    margin: 40px;
+     float: right;
+    text-align: center;
+    font-family: "helvetica neue";
+    font-weight: bold;
+    font-color: white;
+    
+height: 100%;
+
+}
+.name-text{
+    margin: 38px;
+    font-size: 34px;
+    text-align: left;
+    font-family: "helvetica neue";
+    font-weight: bold;
+    color: white;
+}
+        h1 {
+            color:red;
+}
+
+        .input-container {
+            margin-bottom: 15px;
+        }
+
+        input {
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .add-btn {
+            padding: 10px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+        }
+
+        .suggested-btn-container {
+            margin-bottom: 15px;
+        }
+
+        .suggested-btn {
+            padding: 10px;
+            cursor: pointer;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.7);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 4px;
+        }
+
+        .delete-btn {
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 5px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+        }
+
+        .categories {
+            margin-bottom: 15px;
+        }
+
+        .bag-lists-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .bag-list {
+            flex: 1;
+            margin-right: 10px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            margin-bottom: 20px;
+        }
+
+        .bag-item {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 4px;
+        }
+        .item-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 4px;
+            margin-bottom: 8px;
+        }
+
+        .item-container span {
+            flex-grow: 1;
+            margin-right: 10px;
+        }
+
+        .delete-btn {
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 8px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+        }
+.button {
+ padding: 10px;
+background-color: #4CAF50;
+color: white;
+border: 1 px solid black;
+border-radius: 5px;
+cursor: pointer;
+}
+    </style>
+    </style>
+    <title>Hospital Bag Checklist</title>
+</head>
+<body>
+<header class="name-header">   <nav class="navi" >
+                  <div class="navbar">
+                  <a href="newin.html" style="color: white;">Login</a>
+                  <a href="trii.html" style="color: white;">Trimester</a>
+                  <a href="gunjan.html" style="color: white;">Bag</a>
+                  <a href="cur.html" style="color: white;">Tracker</a>
+                  <a href="aboutus.html" style="color: white;">About Us</a>
+                
+</div>
+                </nav>
+
+                      <div class="name-logo">
+        <img src="logo.jpg" class="ll">
+      </div>
+        <div class ="name-text">Mom&me
+          </div>
+</header>
+<br><br><br><br><br>
+    <div class="container">
+        <h1>Hospital Bag Checklist</h1>
+        <div class="input-container">
+            <input type="text" id="itemInput" placeholder="ADD AN ITEM">
+            <button class="add-btn" onclick="addItem()">Add Items</button>
+        </div>
+        <div class="categories">
+            <button class="category-btn" data-category="mama" onclick="addItems('mama', this)">For Mama</button>
+            <button class="category-btn" data-category="baby" onclick="addItems('baby', this)">For Baby</button>
+            <button class="category-btn" data-category="kids" onclick="addItems('kids', this)">For Kids</button>
+            <button class="category-btn" data-category="dad" onclick="addItems('dad', this)">For Dad</button>
+        </div>
+        <div class="bag-lists-container">
+            <div id="mamaList" class="bag-list"></div>
+            <div id="babyList" class="bag-list"></div>
+            <div id="kidsList" class="bag-list"></div>
+            <div id="dadList" class="bag-list"></div>
+        </div>
+    </div>
+    <script>
+        var suggestions = {
+            'mama': ['Comfortable clothing', 'Toiletries', 'Nursing bras', 'Snacks', 'Breast pads', 'Pillow', 'Entertainment (book, magazine)', 'Insurance information'],
+            'baby': ['Diapers', 'Baby clothes', 'Swaddle blankets', 'Burp cloths', 'Newborn hats', 'Baby wipes', 'Baby lotion', 'Car seat'],
+            'kids': ['Change of clothes', 'Snacks', 'Favorite toy', 'Entertainment (books, coloring books)', 'Pajamas', 'Toothbrush', 'Blanket', 'Child\'s medical information'],
+            'dad': ['Change of clothes', 'Toiletries', 'Snacks', 'Phone charger', 'Entertainment (book, music)', 'Important documents', 'Comfortable shoes', 'Camera']
+        };
+
+        function addItem() {
+            var itemInput = document.getElementById("itemInput");
+            var selectedCategory = document.querySelector('.category-btn.active').getAttribute('data-category');
+            var bagList = document.getElementById(selectedCategory + 'List');
+
+            if (itemInput.value.trim() !== "") {
+                var newItem = document.createElement("div");
+                newItem.innerHTML = `
+                    <div class="item-container">
+                        <span>${itemInput.value}</span>
+                        <button class="delete-btn" onclick="deleteItem(this)">Delete</button>
+                    </div>
+                `;
+
+                bagList.appendChild(newItem);
+                itemInput.value = "";
+
+                // Scroll to the newly added item
+                newItem.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function deleteItem(btn) {
+            var bagList = document.getElementById(btn.closest('.bag-list').id);
+            var itemContainer = btn.parentNode.parentNode;
+
+            bagList.removeChild(itemContainer);
+        }
+
+        function addItems(category, btn) {
+            var bagList = document.getElementById(category + 'List');
+            bagList.innerHTML = '';
+
+            suggestions[category].forEach(function (item) {
+                var newItem = document.createElement("div");
+                newItem.innerHTML = `
+                    <div class="item-container">
+                        <span>${item}</span>
+                        <button class="delete-btn" onclick="deleteItem(this)">Delete</button>
+                    </div>
+                `;
+                newItem.classList.add("bag-item");
+
+                bagList.appendChild(newItem);
+            });
+
+            // Add and remove the 'active' class to mark the active category button
+            document.querySelectorAll('.category-btn').forEach(function (button) {
+                button.classList.remove('active');
+            });
+            btn.classList.add('active');
+        }
+function goToPage(page) {
+    window.location.href=page; 
+
+
+
+
+
+      }
+    
+</script>
+ 
+ 
+   
+</body>
+</html>

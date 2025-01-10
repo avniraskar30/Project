@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pregnancy Trimester Calculator</title>
+<style>
+body{
+background-image:url('bb.png');
+background-repeat: no-repeat;
+
+}
+body{
+	background-size:100%,150%;
+}
+.name-header{
+    position:fixed;
+    top:0px;
+
+    height:100px;
+    width:100%;
+    z-index:10;
+    background-color:#0a2d42;
+}
+.navbar a{
+margin-right:10px;
+}
+.name-logo{
+    
+    height: 50px;
+
+    text-align: left;
+    margin: 10px;
+    float: left;
+    
+}
+.ll{
+    height: 80px;
+    width: 80px;
+}
+.navi{
+    margin: 40px;
+     float: right;
+    text-align: center;
+    font-family: "helvetica neue";
+    font-weight: bold;
+    font-color: white;
+    
+height: 100%;
+
+}
+.name-text{
+    margin: 38px;
+    font-size: 34px;
+    text-align: left;
+    font-family: "helvetica neue";
+    font-weight: bold;
+    color: white;
+}
+
+.content-container {
+text-align: center;
+}
+.h2{
+font-size:40px;
+}
+
+</style>
+</head>
+<body>
+<header class="name-header">   <nav class="navi" >
+                  <div class="navbar">
+                  <a href="newin.html" style="color: white;">Login</a>
+                  
+                  <a href="gunjan.html" style="color: white;">Bag</a>
+                  <a href="cur.html" style="color: white;">Tracker</a>
+                  <a href="aboutus.html" style="color: white;">About Us</a>
+                
+</div>
+                </nav>
+
+                      <div class="name-logo">
+        <img src="logo.jpg" class="ll">
+      </div>
+        <div class ="name-text">Mom&me
+          </div>
+</header>
+<br><br><br><br><br>
+<div class="content-container">
+
+<h1>Pregnancy Trimester Calculator</h1>
+
+<form id="trimesterForm">
+<div class="h2">
+  <label for="lastPeriod"><b>Enter the last date of your period:</b></label><br>
+  <input type="date" id="lastPeriod" name="lastPeriod" required><br><br>
+  <button type="submit">Calculate Trimester</button>
+</form>
+</div>
+</div>
+
+<script>
+document.getElementById("trimesterForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  
+  // Get the value of the last period date input
+  var lastPeriodDate = new Date(document.getElementById("lastPeriod").value);
+  
+  // Calculate the current date
+  var today = new Date();
+  
+  // Calculate the gestational age in weeks
+  var gestationalAgeInWeeks = Math.floor((today - lastPeriodDate) / (1000 * 60 * 60 * 24 * 7));
+  
+  // Determine the trimester based on gestational age
+  var trimester;
+  if (gestationalAgeInWeeks < 13) {
+    trimester = 1;
+  } else if (gestationalAgeInWeeks < 27) {
+    trimester = 2;
+  } else {
+    trimester = 3;
+  }
+  
+  // Redirect to the appropriate page based on the trimester
+  switch(trimester) {
+    case 1:
+      window.location.href = "tri1.html";
+      break;
+    case 2:
+      window.location.href = "tri2.html";
+      break;
+    case 3:
+      window.location.href = "tri3.html";
+      break;
+    default:
+      alert("Invalid trimester calculation.");
+  }
+});
+</script>
+
+</body>
+</html>

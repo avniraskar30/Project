@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pregnancy Exercise Clips</title>
+<style>
+
+body{
+background-image:url('back4.jpg');
+background-repeat:no-repeat;
+background-size:100% 100%;
+ font-family:Arial,sans-serif;
+background-color:#f4f4f4;
+margin:0;
+padding:20px;
+text-align:center;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+height:100vh;
+}
+.name-header{
+    position:fixed;
+    top:0px;
+
+    height:100px;
+    width:100%;
+    z-index:10;
+    background-color:#0a2d42;
+}
+.navbar a{
+margin-right:10px;
+}
+.name-logo{
+    
+    height: 50px;
+
+    text-align: left;
+    margin: 10px;
+    float: left;
+    
+}
+.ll{
+    height: 80px;
+    width: 80px;
+}
+.navi{
+    margin: 40px;
+     float: right;
+    text-align: center;
+    font-family: "helvetica neue";
+    font-weight: bold;
+    font-color: white;
+    
+height: 100%;
+
+}
+.name-text{
+    margin: 38px;
+    font-size: 34px;
+    text-align: left;
+    font-family: "helvetica neue";
+    font-weight: bold;
+    color: white;
+}
+
+
+h2{
+color:red;
+text-align:center;
+}
+
+
+h1{
+ color:black;
+text-align:center;
+font-size:40px;
+}
+
+.image-container{
+display:flex;
+justify-contents:center;
+align-items:center;
+flex-wrap:wrap;
+margin-bottom:20px;
+position:relative;
+}
+
+.bottom-text{
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+text-align:center;
+}
+
+  /* Style for the images */
+  .exercise-img {
+    width: 250px;
+    height: auto;
+    cursor: pointer;
+    margin: 20px;
+border-radius:10px;
+box-shadow:0px 0px 10px rgba(0,0,0,0.1);
+transition:transform 0.3s ease-in-out;
+  }
+
+.exercise-img:hover{
+transfrom:scale(2.5);
+background-color:rgba(255,255,255,0.2);
+border:4px solid #333;
+}
+
+ ul {
+      padding-left: 20px;
+      list-style: none;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    strong {
+      color: #0066cc;
+    }
+.button-container {
+ display: flex;
+gap: 10px;
+justify-content: center;
+}
+
+.button {
+ padding: 10px;
+background-color: #4CAF50;
+color: white;
+border: 1 px solid black;
+border-radius: 5px;
+cursor: pointer;
+}
+.note{
+color:red;
+font-family:Arial,sans-serif;
+font-size:20px;
+}
+
+#exercise-video{
+ width: 40%;
+max-width:800px;
+    height: 40%;
+  margin: 20px auto;
+ border-radius:10px;
+box-shadow:0px 0px 10px rgba(0,0,0,0.1);
+}
+
+#exercise-video::-webkit-media-controls{
+background-color:rgba(255,255,255,0.2);
+border-radius:10px;
+}
+
+#exercise-video::-webkit-media-controls-play-button{
+color:#333;
+}
+#exercise-video::-webkit-media-controls-play-button:hover{
+color:#333;
+}
+
+</style>
+</head>
+<body>
+<header class="name-header">   <nav class="navi" >
+                  <div class="navbar">
+                  <a href="newin.html" style="color: white;">Login</a>
+                  <a href="trii.html" style="color: white;">Trimester</a>
+                  <a href="gunjan.html" style="color: white;">Bag</a>
+                  <a href="cur.html" style="color: white;">Tracker</a>
+                  <a href="aboutus.html" style="color: white;">About Us</a>
+                
+</div>
+                </nav>
+
+                      <div class="name-logo">
+        <img src="logo.jpg" class="ll">
+      </div>
+        <div class ="name-text">Mom&me
+          </div>
+</header>
+<h1> Welcome to the video clip collections for 1st Trimester..Here are some videos for you!</h1>
+
+<!-- Images representing exercise clips -->
+<div class="image-container">
+
+<img class="exercise-img" src="exer1.jpeg" onclick="playVideo('exerv1.mp4')" alt="Exercise 1">
+
+<img class="exercise-img" src="exer2.jpeg" onclick="playVideo('exerv2.mp4')" alt="Exercise 2">
+
+<img class="exercise-img" src="exer3.jpeg" onclick="playVideo('exerv3.mp4')" alt="Exercise 3">
+</div>
+<!-- Video player -->
+<video id="exercise-video" controls style="display: none;">
+  Your browser does not support the video tag.
+</video>
+
+<script>
+function playVideo(videoSrc,clickedImage) {
+  // Get video element
+  var video = document.getElementById('exercise-video');
+  
+  // Set video source
+  video.src = videoSrc;
+  
+  // Show video player
+  video.style.display = 'block';
+  
+  // Play video
+  video.play();
+
+clickedImage.style.display='none';
+}
+</script>
+<script>
+function goToPage(page) {
+    window.location.href=page; 
+}
+</script>
+
+<h2>Here is some information about exercise video</h2>
+<ul>
+
+<li><strong><i>*<u>Prenatal Yoga:</u>*</i></strong><b> Yoga helps improve flexibility, balance, and relaxation. Look for prenatal yoga videos that focus on gentle poses suitable for pregnancy.</b></li>
+
+<li><strong><i> *<u>Prenatal Pilates:</u>*</i></strong> <b>Pilates exercises can strengthen the core muscles, which can help support the growing belly and improve posture. Look for prenatal Pilates videos that are specifically designed for pregnancy.</b></li>
+
+<li><strong><i>*<u>Walking:</u>*</i></strong> <b>Walking is a low-impact exercise that can be easily incorporated into your daily routine. Look for walking workout videos tailored for pregnant women.</b></li>
+
+<li><strong><i>*<u>Pelvic Floor Exercises:</u>*</i></strong> <b>Strengthening the pelvic floor muscles can help prevent issues like urinary incontinence and support the pelvic organs during pregnancy and childbirth. Look for videos that demonstrate pelvic floor exercises (Kegel exercises).</b></li>
+
+<li><strong><i>*<u>Breathing Exercises:</u>*</i></strong> <b>Deep breathing exercises can help reduce stress and anxiety, promote relaxation, and improve oxygen flow to the baby. Look for videos that guide you through prenatal breathing techniques.</b></li><br>
+<div class="note">
+<u>Note:</u> Please for more Information and Details consult  with your doctor</div>
+<br><br>
+
+
+<div class="button-container">
+<button onclick="goToPage('donts1.html')" class="button">Previous Page</button> 
+
+<button onclick="goToPage('test1.html')" class="button">Next Page</button>  
+ 
+
+</div>
+</body>
+</html>

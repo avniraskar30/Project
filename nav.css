@@ -1,0 +1,51 @@
+ body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: rgb(170, 169, 169);
+      margin: 0;
+      padding: 0;
+    }
+
+.name-header{
+    position:fixed;
+    top:0px;
+
+    height:100px;
+    width:100%;
+    z-index:10;
+    background-color:#0a2d42;
+}
+.navbar a{
+margin-right:10px;
+}
+.name-logo{
+    
+    height: 50px;
+
+    text-align: left;
+    margin: 10px;
+    float: left;
+    
+}
+.ll{
+    height: 80px;
+    width: 80px;
+}
+.navi{
+    margin: 40px;
+     float: right;
+    text-align: center;
+    font-family: "helvetica neue";
+    font-weight: bold;
+    font-color: white;
+    
+height: 100%;
+
+}
+.name-text{
+    margin: 38px;
+    font-size: 34px;
+    text-align: left;
+    font-family: "helvetica neue";
+    font-weight: bold;
+    color: white;
+}

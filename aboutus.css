@@ -1,0 +1,144 @@
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: rgb(170, 169, 169);
+      margin: 0;
+      padding: 0;
+    }
+
+
+.name-header{
+    position:fixed;
+    top:0px;
+
+    height:100px;
+    width:100%;
+    z-index:10;
+    background-color:#0a2d42;
+}
+.name-logo{
+    
+    height: 50px;
+
+    text-align: left;
+    margin: 10px;
+    float: left;
+    
+}
+.ll{
+    height: 80px;
+    width: 80px;
+}
+
+.name-text{
+    margin: 38px;
+    font-size: 34px;
+    text-align: left;
+    font-family: "helvetica neue";
+    font-weight: bold;
+    color: white;
+}
+.navbar{
+margin-right:10px;
+}
+ .navi{
+    margin: 40px;
+     float: right;
+    text-align: center;
+    font-family: "helvetica neue";
+    font-weight: bold;
+    font-color: white;
+    
+height: 100%;
+
+
+
+ }
+ 
+     
+
+    .wrapper {
+        display: flex;
+      
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background: rgb(223, 215, 215);
+      margin: 10px auto;
+     padding: 5px 30px;
+      width: 800px;
+     box-shadow: 0 0 5px black;
+/*      margin-top: 20px;*/
+    }
+
+    .hr {
+        border: 10px;
+      margin-top: 100px;
+      align-items: center;
+       
+    }
+
+    hr {
+      width: 30px;
+      height: 0px;
+      background: black;
+      margin: 40px;
+    }
+
+    h2 {
+      font-size: 25px;
+      font-weight: normal;
+      text-transform: uppercase;
+    }
+
+    .mission-txt {
+      font-size: 18px;
+      font-weight: 500px;
+      font-style: italic;
+      margin-top: 0;
+    }
+
+    div img {
+      width: 150px;
+      filter: drop-shadow(0 10px 5px black);
+    }
+
+    p {
+      text-align: justify;
+    }
+
+    .developers {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .unit {
+      margin: 25px;
+      width: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    
+
+    .unit p {
+      text-align: left;
+      margin: 2px;
+    }
+
+    .unit p:first-of-type {
+      font-weight: bolder;
+      margin-bottom: 5px;
+    }
+
+    @media screen and (max-width:820px) {
+      .wrapper {
+        width: 80%;
+        padding: 5px 30px;
+      }
+    }
+  
